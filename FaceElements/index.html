@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Both</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+  <script src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <video id="video" autoplay style="display: none"></video>
+    <canvas id="canvas" width="600px" height="400px"></canvas>
+  </div>
+  <div class="wrapper1">
+    <button id="toggleDrawing">Show</button>
+    <div class="text" id="closestPartDisplay"></div>
+  </div>
+
+</body>
+<script src="script.js"></script>
+<script>
+  window.isDrawingEnabled = false;
+  const toggleButton = document.getElementById("toggleDrawing");
+  const closestPartDisplay = document.getElementById("closestPartDisplay");
+  toggleButton.addEventListener("click", function () {
+    window.isDrawingEnabled = !window.isDrawingEnabled;
+    toggleButton.textContent = window.isDrawingEnabled ? 'Hide' : 'Show';
+  });
+</script>
+
+</html>

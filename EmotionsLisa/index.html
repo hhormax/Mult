@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>emotions</title>
+    <style>
+        .content{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <video id="myVideo" width="854" height="480" no-controls playsinline>
+            <source src="game.mp4" type="video/mp4">
+        </video>
+        <video id="myVideo1" width="854" height="480" style="display: none;" no-controls playsinline>
+            <source src="showSmile.mp4" type="video/mp4">
+        </video>
+        <video autoplay='true' id='videoElement' ></video>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
+<script src="face-api.min.js"></script>
+<script src="control.js"></script>
+
+</html>
